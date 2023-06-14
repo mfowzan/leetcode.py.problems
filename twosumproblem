@@ -1,8 +1,7 @@
 nums=[]
-t=int(input("enter the total numbers you want to add to the list: "))
 target=int(input("Enter your target number"))
 while True:
-    b=input("enter number you want to add and leave blank to stop")
+    b=input("enter the number you want to add and leave blank to stop")
     if b=='':
         break
     else:
@@ -12,8 +11,9 @@ sol=[]
 index=0
 for i in nums:
   if nums[ind]+ i == target:
-     sol=sol+[ind] + [nums.index(i)]
+     sol=sol+[ind]
+     sol=sol + [nums.index(i)]
      print(nums)
      print(sol)
-  elif i==nums[t-1]:
+  elif i==nums[-1]:
      index=index+1
