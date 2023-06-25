@@ -7,13 +7,15 @@ while True:
     else:
        nums=nums+[int(b)]
 
-sol=[]
-index=0
+a=[]
+ind=0
+target=9
 for i in nums:
-  if nums[ind]+ i == target:
-     sol=sol+[ind]
-     sol=sol + [nums.index(i)]
-     print(nums)
-     print(sol)
-  elif i==nums[-1]:
-     index=index+1
+    for j in nums:
+        if i+j==target:
+            a.append(nums.index(i))
+            a.append(nums.index(j))
+        
+print(nums)
+print(a)
+
