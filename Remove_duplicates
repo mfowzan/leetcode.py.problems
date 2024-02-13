@@ -1,0 +1,22 @@
+class Solution(object):
+    def removeDuplicates(self, nums):
+        
+#for i in range(100):
+    #a=int(input())
+    #if a=='':
+        #break;
+    #else:
+       #nums.append(a)
+        nums1=set(nums)
+       #print(nums1)
+        nums2=list(nums1)
+       #print(nums2)
+        #x=len(nums) - len(nums2)
+       #print(len(nums2))
+        #print(nums2)
+        nums=nums2
+        n=len(nums)
+       #for i in range(x):
+        #   nums2.append('_')
+       #print(nums2)
+        return n
