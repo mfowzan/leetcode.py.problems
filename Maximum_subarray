@@ -1,0 +1,16 @@
+class Solution(object):
+    def maxSubArray(self, nums):
+        n=len(nums)
+        if n==1:
+            return nums[0]
+        s=sum(nums)
+        final=s
+       
+        for i in range(n):
+            for j in range(i+1,n+1):
+            
+                s1=sum(nums[i:j])
+                
+                if s1>=final:
+                    final=s1
+        return final
