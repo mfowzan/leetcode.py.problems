@@ -1,0 +1,18 @@
+class Solution(object):
+    def minimumOperations(self, nums):
+        def smallest(nums, c):
+            positive_nums = [num for num in nums if num > 0]
+            if positive_nums:
+                a = min(positive_nums)
+            else:
+                return 0
+            nums = [num - a if num > 0 else 0 for num in nums]
+            c = c + 1
+            if all(num == 0 for num in nums):
+                return c
+            else:
+                return smallest(nums, c)
+        
+        c = 0
+        result = smallest(nums, c)
+        return result
