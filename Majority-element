@@ -1,0 +1,25 @@
+#Beginner friendly and non-optimal solution
+class Solution(object):
+    def majorityElement(self, nums):
+        nums2=set(nums)
+        nums2=list(nums2)
+        a={}
+        ans=0
+        largest =0
+        for key in nums2:
+            a[key]=0
+        for i in nums2:
+            for j in nums:
+                if i==j:
+                    a[i]=a[i]+1
+        for v in a.values():
+            if v>largest:
+                largest=v
+        for key,value in a.items():
+            if value==largest:
+                ans=key
+        return ans
+
+#more optimal solution
+nums.sort()
+return nums[len(nums)//2]
